@@ -8,6 +8,7 @@ class Certificate_b extends LxaClass{
 }
 
 class Ssl_data_b  extends LxaClass {
+    static $__desc_privateKeyBits =array("n", "",  "private_key_bits");
 	static $__desc_countryName_r =array("n", "",  "countryname");
 	static $__desc_stateOrProvinceName_r =array("n", "",  "state");
 	static $__desc_localityName_r =array("n", "",  "city");
@@ -64,6 +65,7 @@ function updateform($subaction, $param)
 		$vlist['text_ca_content'] = null;
 	} else {
 		$vlist['nname'] = array('M', $this->certname);
+        $vlist["ssl_data_b_s_privateKeyBits"] = null;
 		$vlist["ssl_data_b_s_commonName_r"]  = null;
 		$vlist["ssl_data_b_s_countryName_r"] =  null;
 		$vlist["ssl_data_b_s_stateOrProvinceName_r"] = null;
@@ -266,6 +268,7 @@ static function addform($parent, $class, $typetd = null)
 		}
 
 		$vlist['nname'] = null;
+        $vlist["ssl_data_b_s_privateKeyBits"] = array("s",array("2048","4096","1024",));
 		$vlist["ssl_data_b_s_commonName_r"]  = null;
 		$vlist["ssl_data_b_s_countryName_r"] =  array("s", $temp);
 		$vlist["ssl_data_b_s_stateOrProvinceName_r"] = null;
@@ -302,8 +305,7 @@ function createNewcertificate()
 			$name = $t;
 		$ltemp[$key] = $name;
 	}
-
-	$config['private_key_bits'] = 1024;
+	$config['private_key_bits'] = (integer) $this->ssl_data_b->privateKeyBits;
 	$privkey = openssl_pkey_new($config);
 	openssl_pkey_export($privkey, $text_key_content);
 	$csr = openssl_csr_new($ltemp, $privkey);
