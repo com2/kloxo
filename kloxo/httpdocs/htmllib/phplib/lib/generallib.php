@@ -48,6 +48,7 @@ static $__desc_sslport =  array("", "",  "ssl_port");
 static $__desc_nonsslport =  array("", "",  "plain_port");
 static $__desc_nonsslportdisable_flag =  array("f", "",  "disable_plainport");
 static $__desc_redirectnonssl_flag =  array("f", "",  "redirect_non_ssl_to_ssl");
+static $__desc_sslextraconf = array("t", "", "sslextraconf");
 }
 
 class kloxoconfig_b extends lxaclass {
@@ -293,10 +294,12 @@ function updateform($subaction, $param)
 		case "portconfig":
 			$this->portconfig_b->setDefaultValue('sslport', $sgbl->__var_prog_ssl_port);
 			$this->portconfig_b->setDefaultValue('nonsslport', $sgbl->__var_prog_port);
+            $this->portconfig_b->setDefaultValue('sslextraconf',"### Client certificate authentication\n# uncomment following lines to activate\n#ssl.verifyclient.activate  = \"enable\"\n#ssl.verifyclient.enforce   = \"enable\"\n#ssl.verifyclient.depth     = 2");
 			$vlist['portconfig_b-sslport'] = null;
 			$vlist['portconfig_b-nonsslport'] = null;
 			//$vlist['portconfig_b-nonsslportdisable_flag'] = null;
 			$vlist['portconfig_b-redirectnonssl_flag'] = null;
+            $vlist['portconfig_b-sslextraconf'] = null;
 		//	return $vlist;
 			break;
 

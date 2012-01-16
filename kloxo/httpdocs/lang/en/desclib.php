@@ -347,6 +347,7 @@ $__description["ssl_port"] = array("Ssl Port");
 $__description["plain_port"] = array("Plain Port");
 $__description["disable_plainport"] = array("Disable Plainport");
 $__description["redirect_non_ssl_to_ssl"] = array("Redirect Non Ssl To Ssl");
+$__description["sslextraconf"] = array("Custom SSL Kloxo Lighttd configuration");
 $__description["host_installapp_remotely"] = array("Host Installapp Remotely");
 $__description["Url_for_remote_installapp"] = array("Url For Remote Installapp");
 $__description["rebuild_vps"] = array("Rebuild Vps");
