@@ -632,6 +632,7 @@ $__description["ssl_domain"] = array("Ssl Domain");
 $__description["certificate"] = array("Certificate");
 $__description["configure_domain"] = array("Configure Domain");
 $__description["private_key"] = array("Private Key");
+$__description["private_key_bits"] = array("Private Key Bits");
 $__description["ca_certificates"] = array("Ca Certificates");
 $__description["countryname"] = array("Countryname");
 $__description["organization"] = array("Organization");

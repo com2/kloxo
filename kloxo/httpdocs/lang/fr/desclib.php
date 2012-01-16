@@ -363,7 +363,6 @@ $__description["ssl_domain"] = array("Ssl Domaine");
 $__description["certificate"] = array("Certificate");
 $__description["private_key"] = array("Clef priver");
 $__description["ca_certificates"] = array("Ca Certificates");
-$__description["private_key_bits"] = array("Private Key Bits");
 $__description["countryname"] = array("Nom de pays");
 $__description["organisation"] = array("Organisation");
 $__description["departmentname"] = array("Nom du departement");
