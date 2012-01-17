@@ -33,6 +33,8 @@ class Sgbl
 		$this->__var_nname_impstr = "___";
 		$this->__var_prog_port = "7778";
 		$this->__var_prog_ssl_port = "7777";
+        $this->__var_prog_sslextra = "\t### Client certificate authentication\n\t# uncomment following lines to activate\n\t#ssl.verifyclient.activate  = \"enable\"\n\t#ssl.verifyclient.enforce   = \"enable\"\n\t#ssl.verifyclient.depth     = 2";
+
 
 		$this->__var_lxlabs_marker = "__lxlabs_marker";
 		$this->__var_lpanelwidth = "220";

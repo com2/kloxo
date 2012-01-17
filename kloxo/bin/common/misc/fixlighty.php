@@ -6,6 +6,7 @@ include_once "htmllib/lib/displayinclude.php";
 $nonsslhash = "#";
 $sslport = $sgbl->__var_prog_ssl_port;
 $nonsslport = $sgbl->__var_prog_port;
+$sslextraconf = $sgbl->__var_prog_sslextra;
 
 $list = parse_opt($argv);
 if (!isset($list['default-port']) && !lxfile_exists("__path_slave_db")) {
